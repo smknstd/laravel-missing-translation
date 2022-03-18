@@ -4,8 +4,6 @@ namespace Smknstd\LaravelMissingTranslation;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Smknstd\LaravelMissingTranslation\Commands\LaravelMissingTranslationCommand;
-use Spatie\Translatable\Translatable;
 
 class MissingTranslationServiceProvider extends PackageServiceProvider
 {
