@@ -38,7 +38,7 @@ In your `config/app.php`, comment out the original TranslationServiceProvider an
     ]
 ```
 
-Then to set up the fallback system you need to call static method on the facade Spatie\Translatable\Facades\Translatable.
+Then to set up the fallback system you need to call static method on the facade `Smknstd\LaravelMissingTranslation\Facades\MissingTranslation`.
 Typically, you would put this in a service provider of your own.
 
 You have to register some code you want to run, by passing a closure. It will be used as a callback function and will be
