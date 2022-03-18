@@ -11,6 +11,6 @@ class MissingTranslation extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'laravel-missing-translation';
+        return 'missing-translation';
     }
 }
