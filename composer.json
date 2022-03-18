@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "smknstd/laravel-missing-translation",
+    "description": "Catch missing translations from your Laravel application",
     "keywords": [
-        ":vendor_name",
+        "smknstd",
         "laravel",
-        ":package_slug"
+        "translations"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/smknstd/laravel-missing-translation",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Arnaud Becher",
+            "email": "arnaud.becher@gmail.com",
             "role": "Developer"
         }
     ],
@@ -34,13 +34,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Smknstd\\LaravelMissingTranslation\\": "src",
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Smknstd\\LaravelMissingTranslation\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -54,10 +53,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "MissingTranslationServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "LaravelMissingTranslation": "MissingTranslation"
             }
         }
     },
