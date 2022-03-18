@@ -6,7 +6,6 @@ use Illuminate\Translation\Translator as LaravelTranslator;
 
 class Translator extends LaravelTranslator
 {
-
     /**
      * Get the translation for the given key.
      *
@@ -38,12 +37,16 @@ class Translator extends LaravelTranslator
             // the translator was instantiated. Then, we can load the lines and return.
             if ($locale) {
                 if (! is_null($line = $this->getLine(
-                    $namespace, $group, $locale, $item, $replace
+                    $namespace,
+                    $group,
+                    $locale,
+                    $item,
+                    $replace
                 ))) {
                     return $line;
                 }
 
-                if(app(MissingTranslation::class)->missingKeyCallback) {
+                if (app(MissingTranslation::class)->missingKeyCallback) {
                     try {
                         $callbackReturnValue = (app(MissingTranslation::class)->missingKeyCallback)(
                             $key,
@@ -53,24 +56,32 @@ class Translator extends LaravelTranslator
                         if (is_string($callbackReturnValue)) {
                             return $callbackReturnValue;
                         }
-                    } catch(\Exception $e) {
+                    } catch (\Exception $e) {
                         //prevent the fallback to crash
                     }
                 }
 
                 if (! is_null($line = $this->getLine(
-                    $namespace, $group, $this->fallback, $item, $replace
+                    $namespace,
+                    $group,
+                    $this->fallback,
+                    $item,
+                    $replace
                 ))) {
                     return $line;
                 }
             } else {
                 if (! is_null($line = $this->getLine(
-                    $namespace, $group, $this->fallback, $item, $replace
+                    $namespace,
+                    $group,
+                    $this->fallback,
+                    $item,
+                    $replace
                 ))) {
                     return $line;
                 }
 
-                if(app(MissingTranslation::class)->missingKeyCallback) {
+                if (app(MissingTranslation::class)->missingKeyCallback) {
                     try {
                         $callbackReturnValue = (app(MissingTranslation::class)->missingKeyCallback)(
                             $key,
@@ -80,7 +91,7 @@ class Translator extends LaravelTranslator
                         if (is_string($callbackReturnValue)) {
                             return $callbackReturnValue;
                         }
-                    } catch(\Exception $e) {
+                    } catch (\Exception $e) {
                         //prevent the fallback to crash
                     }
                 }
