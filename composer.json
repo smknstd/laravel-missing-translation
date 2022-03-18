@@ -53,10 +53,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "MissingTranslationServiceProvider"
+                "Smknstd\\LaravelMissingTranslation\\MissingTranslationServiceProvider"
             ],
             "aliases": {
-                "LaravelMissingTranslation": "MissingTranslation"
+                "LaravelMissingTranslation": "Smknstd\\LaravelMissingTranslation\\Facades\\MissingTranslation"
             }
         }
     },
