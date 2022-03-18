@@ -15,7 +15,7 @@ class MissingTranslationServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('missing-translation');
+            ->name('laravel-missing-translation');
     }
 
     public function packageRegistered(): void
