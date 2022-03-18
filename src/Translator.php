@@ -52,6 +52,13 @@ class Translator extends LaravelTranslator
                             $key,
                             $locale,
                             $this->fallback,
+                            $this->getLine(
+                                $namespace,
+                                $group,
+                                $this->fallback,
+                                $item,
+                                $replace
+                            )
                         );
                         if (is_string($callbackReturnValue)) {
                             return $callbackReturnValue;
@@ -85,7 +92,6 @@ class Translator extends LaravelTranslator
                     try {
                         $callbackReturnValue = (app(MissingTranslation::class)->missingKeyCallback)(
                             $key,
-                            $locale,
                             $this->fallback,
                         );
                         if (is_string($callbackReturnValue)) {
