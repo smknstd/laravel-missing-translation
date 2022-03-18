@@ -34,7 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Smknstd\\LaravelMissingTranslation\\": "src",
+            "Smknstd\\LaravelMissingTranslation\\": "src"
         }
     },
     "autoload-dev": {
