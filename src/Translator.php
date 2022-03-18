@@ -68,7 +68,7 @@ class Translator extends LaravelTranslator
                     }
                 }
 
-                if (! is_null($line = $this->getLine(
+                if ($fallback && ! is_null($line = $this->getLine(
                     $namespace,
                     $group,
                     $this->fallback,
